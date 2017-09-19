@@ -32,3 +32,40 @@ Processing by HomeController#index as HTML
   Rendered home/_navbar.html.erb (0.1ms)
   Rendered home/_new_question_form.html.erb (0.2ms)
 Completed 200 OK in 119ms (Views: 118.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 12:40:16 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 12:41:54 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 124ms (Views: 122.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2017-09-19 12:42:14 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PL+J8xuD0uOqOmejqLCwPCZ07xodFwEV4W+cl3NXIyXlutIEOeX3v15LKiSu14qRNOIRJybg5xRFtz8reZouYQ==", "question"=>{"email"=>"muniner1@gmail.com", "body"=>"what is the population in Guyana"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "muniner1@gmail.com"], ["body", "what is the population in Guyana"], ["created_at", "2017-09-19 16:42:14.569169"], ["updated_at", "2017-09-19 16:42:14.569169"]]
+  [1m[35m (21.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 24.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 12:42:14 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 114.2ms | ActiveRecord: 0.5ms)
