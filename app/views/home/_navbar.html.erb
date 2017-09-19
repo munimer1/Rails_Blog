@@ -22,8 +22,8 @@
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
     <% else %>
-        <li><%= button_to "Sign In", new_user_session_path, class: "btn btn-success navbar-btn btn-sm" %></li>
-        <li><%= button_to "Sign Up", new_user_registration_path, class: "btn btn-success navbar-btn btn-sm" %></li>
+     <%= button_to "Sign In", new_user_session_path, class: "home btn btn-success navbar-btn btn-sm" %>
+        <%= button_to "Sign Up", new_user_registration_path, class: "home btn btn-success navbar-btn btn-sm" %>
         <% end %>
     </div>
   </div>

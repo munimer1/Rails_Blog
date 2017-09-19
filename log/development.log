@@ -757,3 +757,448 @@ Processing by HomeController#index as HTML
   Rendered home/_navbar.html.erb (0.7ms)
   Rendered home/_new_question_form.html.erb (0.2ms)
 Completed 200 OK in 122ms (Views: 120.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/33" for 127.0.0.1 at 2017-09-19 14:09:47 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 33]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 33]]
+  Rendered questions/show.html.erb within layouts/application (10.1ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.7ms)
+Completed 200 OK in 144ms (Views: 140.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:09:56 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  Rendered home/_navbar.html.erb (0.9ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 123ms (Views: 121.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:11:28 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 130.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:12:58 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (5.3ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 308ms (Views: 306.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/home.self-f4d3a9e0423760d7abc0c9194c0fc72a64719f9786ade54ead1280ba2dbb5ff9.css?body=1" for 127.0.0.1 at 2017-09-19 14:12:58 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:13:42 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 262ms (Views: 261.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/home.self-949b85f2bcd0cc6eed4294ce8b9bd5582691fc570f70e7991084980c0c981897.css?body=1" for 127.0.0.1 at 2017-09-19 14:13:43 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:14:08 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 256ms (Views: 255.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/home.self-eeed6fb0b9ba16a589bfceb9c0f3910bd066a28fa9935dc54d9cff3704a85094.css?body=1" for 127.0.0.1 at 2017-09-19 14:14:08 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:14:21 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 249ms (Views: 247.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/home.self-3bba30fad5bb955fee2f336d692afed789482f059e0fb9295bf19ca5a29e1b66.css?body=1" for 127.0.0.1 at 2017-09-19 14:14:21 -0400
+
+
+Started GET "/questions/33" for 127.0.0.1 at 2017-09-19 14:17:04 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 33]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 33]]
+  Rendered questions/show.html.erb within layouts/application (10.3ms)
+  Rendered home/_navbar.html.erb (0.4ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 152ms (Views: 142.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/33" for 127.0.0.1 at 2017-09-19 14:17:53 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 33]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.7ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 33]]
+  Rendered questions/show.html.erb within layouts/application (12.2ms)
+  Rendered home/_navbar.html.erb (0.9ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 138.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:18:01 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 113ms (Views: 111.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:20:23 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+  Rendered home/_navbar.html.erb (0.9ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 281ms (Views: 279.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/home.self-839c9688983917d21f6035ad1f19d2130555fb0ba0581a527d5b07ad2b908d86.css?body=1" for 127.0.0.1 at 2017-09-19 14:20:23 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:21:00 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 135ms (Views: 133.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:21:02 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (5.3ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 126ms (Views: 125.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:21:11 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 245ms (Views: 243.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/home.self-6597d56586dbd6bfbda7d8e6b6db7687de6429dc64b86b8f0fcf323764a242db.css?body=1" for 127.0.0.1 at 2017-09-19 14:21:11 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:22:54 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 255ms (Views: 254.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/home.self-ec423936cd4c4e713322efca060e66dcbae1bdd44279e3694be9dd8bd1b07716.css?body=1" for 127.0.0.1 at 2017-09-19 14:22:54 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:23:14 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 241ms (Views: 239.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/home.self-562af3bad4bf4404e5c4b067410e288d08a0f5b3843a55f96382b6fe1996e0bb.css?body=1" for 127.0.0.1 at 2017-09-19 14:23:14 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:23:50 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 264ms (Views: 262.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/home.self-644cce048a76878485323e3ffa059bff24d2d8ad46ee8aff919706f036bd8068.css?body=1" for 127.0.0.1 at 2017-09-19 14:23:50 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:24:58 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 258ms (Views: 256.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/home.self-b2dc2cb3f0c1d5ca3d982a462f917b730a2234be66289d87fdc98fa0d494d7ac.css?body=1" for 127.0.0.1 at 2017-09-19 14:24:59 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:26:33 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+  Rendered home/_navbar.html.erb (1.2ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 136ms (Views: 134.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:27:23 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (1.7ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+  Rendered home/_navbar.html.erb (1.2ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 129ms (Views: 126.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/questions/33" for 127.0.0.1 at 2017-09-19 14:27:39 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 33]]
+  Rendered home/_new_answer_form.html.erb (0.8ms)
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 33]]
+  Rendered questions/show.html.erb within layouts/application (11.5ms)
+  Rendered home/_navbar.html.erb (0.7ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 144ms (Views: 141.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:28:30 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (1.1ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+  Rendered home/_navbar.html.erb (1.6ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 284ms (Views: 281.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/home.self-43dd1f8bdbe9d4d1fe13a69fc8c0e5808f7d7ecafa8a09b525fafb051299cd96.css?body=1" for 127.0.0.1 at 2017-09-19 14:28:31 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:28:48 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 245ms (Views: 243.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/home.self-874b7aa0f3c0cb90fdf521051927e9ac34110329dc7d34efdd4a804a81ac5d7e.css?body=1" for 127.0.0.1 at 2017-09-19 14:28:48 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:28:51 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+  Rendered home/_navbar.html.erb (0.9ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 127ms (Views: 125.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:32:17 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 262ms (Views: 259.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/home.self-f892ccef4e6dc57507f031e1c46f29ba0b393d66010550142582935e005d0a13.css?body=1" for 127.0.0.1 at 2017-09-19 14:32:18 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:34:14 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 253ms (Views: 251.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/home.self-80773a29e510fa8432024d61ad8efe9ba35760700a94f96b7c9af7118a3d13df.css?body=1" for 127.0.0.1 at 2017-09-19 14:34:14 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:34:18 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 117ms (Views: 115.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:35:10 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+  Rendered home/_navbar.html.erb (0.7ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 258ms (Views: 256.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/home.self-2f12c4fe253d65eca541a45bfd8ef232a1b7647f8fa63b33c0634e034e654ddc.css?body=1" for 127.0.0.1 at 2017-09-19 14:35:11 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:36:23 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+  Rendered home/_navbar.html.erb (1.4ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:36:52 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (8.0ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 253ms (Views: 251.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/home.self-e4e803f24d5f6ac1906f0ab40feacc3ad9c691cbe45fb0916525bb88c804a5fb.css?body=1" for 127.0.0.1 at 2017-09-19 14:36:52 -0400
+
+
+Started GET "/questions/33" for 127.0.0.1 at 2017-09-19 14:36:59 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 33]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 33]]
+  Rendered questions/show.html.erb within layouts/application (14.1ms)
+  Rendered home/_navbar.html.erb (0.4ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 125.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-19 14:37:06 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Dyy9ttWQKx2oDMnV1QlCSyi/gtaGO0tgh+bRqBEl6iG3jR4FO20cWO6eUr2/wcVzdD51qaoXeACPmCN2LHfSgA=="}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Dyy9ttWQKx2oDMnV1QlCSyi/gtaGO0tgh+bRqBEl6iG3jR4FO20cWO6eUr2/wcVzdD51qaoXeACPmCN2LHfSgA=="}
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 129ms (Views: 128.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-19 14:37:16 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JZp5z5lUsZK/iLEemB6Y91xHt3T4C09cv59h1mZWDiOdO9p8d6mG1/kaKnby1h/PAMZAC9QnfDy34ZMIWwQ2gg==", "user"=>{"email"=>"muniner1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "muniner1@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-09-19 18:07:43.150531"], ["current_sign_in_at", "2017-09-19 18:37:17.096718"], ["sign_in_count", 3], ["updated_at", "2017-09-19 18:37:17.097958"], ["id", 1]]
+  [1m[36m (14.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 213ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:37:17 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/_navbar.html.erb (1.8ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 110.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2017-09-19 14:37:38 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VeZuqYx3x/A9A0EDxoOqV91f22KgxL7DkTvhxxoY1kDztmKaLV4hsR7qmiGCaCbMz+scA21JfFtvQK1QRMdPUA==", "question"=>{"email"=>"muniner1@gmail.com", "body"=>"how many cars"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "muniner1@gmail.com"], ["body", "how many cars"], ["created_at", "2017-09-19 18:37:38.138588"], ["updated_at", "2017-09-19 18:37:38.138588"]]
+  [1m[35m (17.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:37:38 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_navbar.html.erb (1.6ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 109ms (Views: 107.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/34" for 127.0.0.1 at 2017-09-19 14:37:44 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 34]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 34]]
+  Rendered questions/show.html.erb within layouts/application (14.3ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 125ms (Views: 122.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2017-09-19 14:37:55 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7YvgLBlDvAxNVISxGGmvNSWdC0s4eOoU1TN3rFpoyslL2+wfuGpaTW69X5NcgiOuNynMKvX1KIwrSDs7BLdT2Q==", "answer"=>{"question_id"=>"34", "email"=>"muniner1@gmail.com", "body"=>"10 cars"}}
+  [1m[35mQuestion Load (1.7ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 34]]
+Unpermitted parameter: question_id
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "answers" ("email", "body", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "muniner1@gmail.com"], ["body", "10 cars"], ["question_id", 34], ["created_at", "2017-09-19 18:37:55.459524"], ["updated_at", "2017-09-19 18:37:55.459524"]]
+  [1m[36m (19.3ms)[0m  [1mcommit transaction[0m
+Unpermitted parameter: question_id
+Redirected to http://localhost:3000/questions/34
+Completed 302 Found in 35ms (ActiveRecord: 24.3ms)
+
+
+Started GET "/questions/34" for 127.0.0.1 at 2017-09-19 14:37:55 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 34]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[35mAnswer Load (0.7ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 34]]
+  Rendered questions/show.html.erb within layouts/application (10.9ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 126ms (Views: 123.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 14:38:14 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_navbar.html.erb (1.7ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 125ms (Views: 122.7ms | ActiveRecord: 0.8ms)
