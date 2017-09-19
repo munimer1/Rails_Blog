@@ -21,10 +21,13 @@
         <li><form><a href="#" class="btn btn-success navbar-btn btn-sm" data-toggle="modal" data-target="#new-question-modal">Ask Question</a></form></li>
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
-    <% else %>
+   
+   <% else %>
+   <div>
      <%= button_to "Sign In", new_user_session_path, class: "home btn btn-success navbar-btn btn-sm" %>
-        <%= button_to "Sign Up", new_user_registration_path, class: "home btn btn-success navbar-btn btn-sm" %>
-        <% end %>
+     <%= link_to "Sign Up", new_user_registration_path, class: "home btn btn-success navbar-btn btn-sm" %>
+    <% end %>
+    </div>
     </div>
   </div>
 </nav>
