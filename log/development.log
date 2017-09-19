@@ -2298,3 +2298,27 @@ Processing by HomeController#index as HTML
   Rendered home/_navbar.html.erb (0.5ms)
   Rendered home/_new_question_form.html.erb (0.2ms)
 Completed 200 OK in 118ms (Views: 116.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 15:03:53 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (6.3ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 296ms (Views: 294.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/home.self-a4971fac81ff45fc9e51b8d2b0650023328e9b237048bad9bdec2e64d7a3aea6.css?body=1" for 127.0.0.1 at 2017-09-19 15:03:53 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 15:04:08 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (1.1ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 220ms (Views: 218.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/home.self-4026733ef72f2ac1fd845fc63382f0e1a2154630c2432be094eb80f51ddc3623.css?body=1" for 127.0.0.1 at 2017-09-19 15:04:08 -0400
