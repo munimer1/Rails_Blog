@@ -11,12 +11,20 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <% if current_user %>
+
       <ul class="nav navbar-nav navbar-right">
         <li>
           <div class="navbar-text"><%= current_user_email %></div>
         </li>
+        
         <li><form><a href="#" class="btn btn-success navbar-btn btn-sm" data-toggle="modal" data-target="#new-question-modal">Ask Question</a></form></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
+    <% else %>
+        <li><%= button_to "Sign In", new_user_session_path, class: "btn btn-success navbar-btn btn-sm" %></li>
+        <li><%= button_to "Sign Up", new_user_registration_path, class: "btn btn-success navbar-btn btn-sm" %></li>
+        <% end %>
     </div>
   </div>
 </nav>
