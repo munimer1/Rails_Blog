@@ -2423,3 +2423,576 @@ Processing by HomeController#index as HTML
   Rendered home/_navbar.html.erb (2.0ms)
   Rendered home/_new_question_form.html.erb (0.3ms)
 Completed 200 OK in 132ms (Views: 129.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:26:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (1.1ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (139.8ms)
+  Rendered home/_navbar.html.erb (4.8ms)
+  Rendered home/_new_question_form.html.erb (0.8ms)
+Completed 200 OK in 1439ms (Views: 1245.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-09-20 10:26:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-09-20 10:26:38 -0400
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-09-20 10:26:39 -0400
+
+
+Started GET "/assets/home.self-b84f0ff576209eb6985d19f332dcb4c8388c7702962eed008059a695db7d8312.js?body=1" for 127.0.0.1 at 2017-09-20 10:26:39 -0400
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-09-20 10:26:39 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2017-09-20 10:26:39 -0400
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-09-20 10:46:08 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (205.9ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 357ms (Views: 348.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-20 10:47:06 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"18bR461+/mxlIXF1gPh0XM/716Szc0wsT//7zwLiJVbeLPSTPKLRCjsDt+qwr/DXtdq6nVpOOEGNQCRp3OnKmg==", "user"=>{"email"=>"conumaeme77@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'conumaeme77@gmail.com' LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "conumaeme77@gmail.com"], ["encrypted_password", "$2a$11$MI2G9U.uVknwrMM5fh8R8ery/8.YM1pqlFYn/o10KXb7lnfaVHaV."], ["created_at", "2017-09-20 14:47:06.876124"], ["updated_at", "2017-09-20 14:47:06.876124"]]
+  [1m[35m (13.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-09-20 14:47:06.894380"], ["current_sign_in_at", "2017-09-20 14:47:06.894380"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2017-09-20 14:47:06.895428"], ["id", 2]]
+  [1m[36m (15.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 564ms (ActiveRecord: 33.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:47:07 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered home/_navbar.html.erb (2.6ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 104ms (Views: 102.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2017-09-20 10:48:01 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uuI4BVsoXzdlldiAQXamPRsJgyG8Dn+ANojMlfUWAiuzCB11yvRwUTu3Hh9xISK2YSjuGFUzC+30NxMzKx3t5w==", "question"=>{"email"=>"conumaeme77@gmail.com", "body"=>"What is Guyana best Dish"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "conumaeme77@gmail.com"], ["body", "What is Guyana best Dish"], ["created_at", "2017-09-20 14:48:01.970858"], ["updated_at", "2017-09-20 14:48:01.970858"]]
+  [1m[35m (13.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 16.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:48:01 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered home/_navbar.html.erb (2.2ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 109ms (Views: 107.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/34" for 127.0.0.1 at 2017-09-20 10:49:51 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 34]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered home/_new_answer_form.html.erb (1.2ms)
+  [1m[36mAnswer Load (0.8ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 34]]
+  Rendered questions/show.html.erb within layouts/application (60.3ms)
+  Rendered home/_navbar.html.erb (0.7ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 368ms (Views: 187.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2017-09-20 10:50:11 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Uv6tp6WdFj90wGxJPQHMG2QGl553ptilQFg/lQ0+LDwod/GD0pbPqPxxy4Uo4O7F7F3Z5Dj7w9Xvr9Yij8XfA==", "answer"=>{"question_id"=>"34", "email"=>"conumaeme77@gmail.com", "body"=>"20 cars"}}
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 34]]
+Unpermitted parameter: question_id
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "answers" ("email", "body", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "conumaeme77@gmail.com"], ["body", "20 cars"], ["question_id", 34], ["created_at", "2017-09-20 14:50:11.554115"], ["updated_at", "2017-09-20 14:50:11.554115"]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+Unpermitted parameter: question_id
+Redirected to http://localhost:3000/questions/34
+Completed 302 Found in 33ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/questions/34" for 127.0.0.1 at 2017-09-20 10:50:11 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 34]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 34]]
+  Rendered questions/show.html.erb within layouts/application (10.7ms)
+  Rendered home/_navbar.html.erb (0.2ms)
+  Rendered home/_new_question_form.html.erb (0.6ms)
+Completed 200 OK in 125ms (Views: 122.9ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-20 10:50:15 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4Ptidrq4s7eJfdKF5OaHtsBMa8ihoZeCmVkAkNo8DTDpEUcGK2Sc0ddfFBrUsQM9um0G8Uic4+9b5t82BDfi/A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:50:15 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+  Rendered home/_navbar.html.erb (0.7ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 111.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-20 10:50:18 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eeZoyfJFJjakZ2NjfZixIl4istAuFSsn5AY3CqaHop2CVWDqhAZZ9nH1bwqXhaD9Idw3CzoWEk6x0czzwah4tg=="}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"eeZoyfJFJjakZ2NjfZixIl4istAuFSsn5AY3CqaHop2CVWDqhAZZ9nH1bwqXhaD9Idw3CzoWEk6x0czzwah4tg=="}
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (42.9ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 171ms (Views: 170.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-20 10:50:29 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bh+iJLjrrNDHXKRBjtEmIBvx1lzckDYyCTyzp6qB2Q/9rKoHzqjTEBLOqChkzDf/ZA9Th8iTD1tc60heza4DJA==", "user"=>{"email"=>"muniner1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "muniner1@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-09-19 20:28:41.339899"], ["current_sign_in_at", "2017-09-20 14:50:29.616383"], ["sign_in_count", 5], ["updated_at", "2017-09-20 14:50:29.617674"], ["id", 1]]
+  [1m[35m (14.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 218ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:50:29 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_navbar.html.erb (2.0ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 105ms (Views: 104.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/35" for 127.0.0.1 at 2017-09-20 10:50:34 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 35]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 35]]
+  Rendered questions/show.html.erb within layouts/application (9.4ms)
+  Rendered home/_navbar.html.erb (0.4ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 113ms (Views: 110.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2017-09-20 10:50:55 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3c5rdnWn0Ge+erXJQL6BiSVgUsXF5VsCWwhzMkjOSQ0AdyCE9oITd+MO9EuNLPYFfW4+R0v5t6b3I4d0kcdINA==", "answer"=>{"question_id"=>"35", "email"=>"muniner1@gmail.com", "body"=>"cook up"}}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 35]]
+Unpermitted parameter: question_id
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "answers" ("email", "body", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "muniner1@gmail.com"], ["body", "cook up"], ["question_id", 35], ["created_at", "2017-09-20 14:50:55.117023"], ["updated_at", "2017-09-20 14:50:55.117023"]]
+  [1m[36m (17.2ms)[0m  [1mcommit transaction[0m
+Unpermitted parameter: question_id
+Redirected to http://localhost:3000/questions/35
+Completed 302 Found in 29ms (ActiveRecord: 20.5ms)
+
+
+Started GET "/questions/35" for 127.0.0.1 at 2017-09-20 10:50:55 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 35]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 35]]
+  Rendered questions/show.html.erb within layouts/application (13.8ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 108.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:51:04 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_navbar.html.erb (2.0ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 105ms (Views: 103.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/35" for 127.0.0.1 at 2017-09-20 10:51:10 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 35]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_new_answer_form.html.erb (0.4ms)
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 35]]
+  Rendered questions/show.html.erb within layouts/application (10.0ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 123ms (Views: 119.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:51:14 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/_navbar.html.erb (1.7ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 105ms (Views: 103.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-20 10:51:16 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rbQnAGAnofiS+JToWzNrPPyHFQF0dtmJRRUuwf+g9nRwDWzy4wJi6M+M1WqWoRywpIl5g/pqNS3pPtqHJqn3TQ=="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:51:16 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 105.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/35" for 127.0.0.1 at 2017-09-20 10:51:21 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 35]]
+  Rendered home/_new_answer_form.html.erb (0.5ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 35]]
+  Rendered questions/show.html.erb within layouts/application (13.5ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 101.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:51:39 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/35" for 127.0.0.1 at 2017-09-20 10:53:50 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mQuestion Load (1.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 35]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 35]]
+  Rendered questions/show.html.erb within layouts/application (12.2ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 130ms (Views: 125.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-20 10:56:26 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XMDTnAStdVO9UGJLKdMFnfycFKge7duo61L+20jF3fiCUj4S4NA8MpOxw8aHHPXuE/rUnnoGyZdvNE8hk+DiqQ=="}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"XMDTnAStdVO9UGJLKdMFnfycFKge7duo61L+20jF3fiCUj4S4NA8MpOxw8aHHPXuE/rUnnoGyZdvNE8hk+DiqQ=="}
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.2ms)
+  Rendered home/_navbar.html.erb (0.4ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 138ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-20 10:56:37 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMiEcumAs8DlLQe3tlN/7EU8GYEC1mjIo0d2wHPnYx/OWmn8Df36ocvMpjoYnI+fqlrZt2Y9evcnIcc6qMJcTg==", "user"=>{"email"=>"muniner1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "muniner1@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-09-20 14:50:29.616383"], ["current_sign_in_at", "2017-09-20 14:56:38.145181"], ["sign_in_count", 6], ["updated_at", "2017-09-20 14:56:38.146478"], ["id", 1]]
+  [1m[35m (15.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 217ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 10:56:38 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_navbar.html.erb (1.8ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 120ms (Views: 118.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/35" for 127.0.0.1 at 2017-09-20 10:56:49 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 35]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 35]]
+  Rendered questions/show.html.erb within layouts/application (10.3ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 113ms (Views: 110.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 12:13:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (33.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/_navbar.html.erb (41.7ms)
+  Rendered home/_new_question_form.html.erb (1.2ms)
+Completed 200 OK in 538ms (Views: 474.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-09-20 12:13:37 -0400
+
+
+Started GET "/assets/home.self-b84f0ff576209eb6985d19f332dcb4c8388c7702962eed008059a695db7d8312.js?body=1" for 127.0.0.1 at 2017-09-20 12:13:37 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2017-09-20 12:13:37 -0400
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-09-20 12:13:37 -0400
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-20 12:13:42 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SZQlZMg0hpJe0m3brjRPsIwI4wjZ8390zbUQrewm52XdqLfr2zczKlrhuiBehxmM5g+1dK3j+hLzlaCJKOnUjg=="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 12:13:42 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+  Rendered home/_navbar.html.erb (4.5ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 106.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/35" for 127.0.0.1 at 2017-09-20 12:13:51 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 35]]
+  Rendered home/_new_answer_form.html.erb (0.9ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 35]]
+  Rendered questions/show.html.erb within layouts/application (38.6ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 245ms (Views: 146.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 12:13:59 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 133.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-20 12:14:02 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"X6cHmUl5Rrbbu5aOMl8FCzX+kSINMRZDi3rRhEewnbI2QzPK3BFJRQkELC6mAgz1JqZWsAZii0KeuF6n9b1Dvw=="}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"X6cHmUl5Rrbbu5aOMl8FCzX+kSINMRZDi3rRhEewnbI2QzPK3BFJRQkELC6mAgz1JqZWsAZii0KeuF6n9b1Dvw=="}
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (112.4ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 228ms (Views: 223.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-20 12:14:10 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GMee4FPovYiJQ8g9BcKBnnx9M4eWqRVkF5k1/nkFgu5xI6qzxoCye1v8cp2Rn4hgbyX0FZ36iGUCW7rdywhc4w==", "user"=>{"email"=>"muniner1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "muniner1@gmail.com"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (6.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-09-20 14:56:38.145181"], ["current_sign_in_at", "2017-09-20 16:14:11.201344"], ["sign_in_count", 7], ["updated_at", "2017-09-20 16:14:11.206118"], ["id", 1]]
+  [1m[35m (17.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 314ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 12:14:11 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_navbar.html.erb (1.6ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/35" for 127.0.0.1 at 2017-09-20 12:14:33 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 35]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 35]]
+  Rendered questions/show.html.erb within layouts/application (14.4ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 114ms (Views: 111.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 12:14:47 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/_navbar.html.erb (2.2ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 111ms (Views: 109.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2017-09-20 12:15:31 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qUqWA50YNwm8ljDsCHwUnsV5yB4mjaZkKH1g+ZgjX7xGZYP1Q3360SqbBoBfe/0bfjwJxWNPHBnJeneFAm7FNA==", "question"=>{"email"=>"patrice142@msn.com", "body"=>"What is the President name"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (9.4ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "patrice142@msn.com"], ["body", "What is the President name"], ["created_at", "2017-09-20 16:15:31.993897"], ["updated_at", "2017-09-20 16:15:31.993897"]]
+  [1m[35m (26.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 35.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 12:15:32 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_navbar.html.erb (1.6ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 111ms (Views: 109.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/questions/36" for 127.0.0.1 at 2017-09-20 12:15:38 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 36]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_new_answer_form.html.erb (0.5ms)
+  [1m[36mAnswer Load (0.7ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 36]]
+  Rendered questions/show.html.erb within layouts/application (10.2ms)
+  Rendered home/_navbar.html.erb (0.2ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 104ms (Views: 101.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2017-09-20 12:16:01 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ay2x1rpj7lWSb5xONdbRJSm1XfGQYOX+RgCesxg9LsfsAqQgZAYjjQRiqiJi0TigkvCcKtWiX4OnB4nPgnC0Tw==", "answer"=>{"question_id"=>"36", "email"=>"patrice142@msn.com", "body"=>"BJ"}}
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 36]]
+Unpermitted parameter: question_id
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "answers" ("email", "body", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "patrice142@msn.com"], ["body", "BJ"], ["question_id", 36], ["created_at", "2017-09-20 16:16:01.916214"], ["updated_at", "2017-09-20 16:16:01.916214"]]
+  [1m[36m (22.5ms)[0m  [1mcommit transaction[0m
+Unpermitted parameter: question_id
+Redirected to http://localhost:3000/questions/36
+Completed 302 Found in 37ms (ActiveRecord: 26.6ms)
+
+
+Started GET "/questions/36" for 127.0.0.1 at 2017-09-20 12:16:01 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 36]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 36]]
+  Rendered questions/show.html.erb within layouts/application (11.0ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 114ms (Views: 109.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 12:16:14 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/_navbar.html.erb (1.8ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 113ms (Views: 111.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-20 12:18:33 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wzw9w0mtxRmWOrGDoZVP0fixgfc5mdE5p0U53K975GUsEyg1l8gIwQA3h+/2kqZUQ/RALHxba0RGQi6gNTZ+7Q=="}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 12:18:33 -0400
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+  Rendered home/_navbar.html.erb (5.8ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 113ms (Views: 111.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/36" for 127.0.0.1 at 2017-09-20 12:18:37 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 36]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 36]]
+  Rendered questions/show.html.erb within layouts/application (7.9ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 113ms (Views: 110.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 12:18:52 -0400
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (4.1ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.4ms)
